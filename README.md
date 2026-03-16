@@ -100,13 +100,15 @@ For a full deep-dive into setup and common issues, see [INSTALLATION.md](./INSTA
 
 ## 🤝 Community & Support
 
-- **Discord**: [Join the Flynax Beast Community](https://discord.gg/flynax) (Coming Soon)
-- **Twitter**: [@FlynaxLang](https://twitter.com/flynaxlang)
-- **Issues**: Found a bug? Open an issue on GitHub!
+Flynax is growing! For now, all community activity and support happen right here on GitHub:
+
+- **💬 GitHub Discussions**: The best place for questions, ideas, and showing off what you've built.
+- **🐞 Issue Tracker**: Found a bug? Open an issue and we'll squash it.
+- **✉️ Direct Contact**: Reach out to the creator **[MohammadSaad006](https://github.com/MohammadSaad006)** (KingHyder Studio) via GitHub profile or by opening a "Support" issue.
 
 ---
 
 ## 📜 License
 Flynax is proudly Open Source under the **MIT License**.
 
-Built with 🔥 by the Flynax Team.
+Built with 🔥 by **KingHyder Studio**.
