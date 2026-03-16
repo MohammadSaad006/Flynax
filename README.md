@@ -1,65 +1,112 @@
-# ⚡ Flynax: The Beast Language for the Modern Era
+# ⚡ Flynax: The high-Performance "Beast" Language
 
-**Flynax** is a high-performance, compiled programming language designed to combine the **clean syntax of Python** with the **raw power of C++**. Powered by LLVM, Flynax compiles to native machine code that beats Python in raw benchmarks.
+**Flynax** is a modern, high-performance programming language designed to bridge the gap between **Python's readability** and **C++'s raw power**. Built on the world-class **LLVM** infrastructure, Flynax compiles directly to native machine code, delivering "Beast Mode" performance for systems, game, and web development.
 
-![Flynax Logo](https://raw.githubusercontent.com/flynax-lang/flynex/main/assets/logo.png)
-
-## 🚀 Key Features
-
-- **⚡ Blazing Fast**: Native compilation via LLVM (Modular Real IR mode).
-- **🐍 Pythonic Syntax**: Clean, indentation-based logic. No `def` or `self` boilerplate.
-- **🛠️ Professional Ecosystem**: Integrated package manager (`flpm`) and cloud registry.
-- **🌐 Universal**: Compiles to Native (Windows/Linux) and WebAssembly (WASM).
-- **🔋 Batteries Included**: Native support for SQLite, JSON, Networking, and SDL2 Graphics.
+![Flynax Logo](./assets/logo.png)
 
 ---
 
-## 💻 Quick Installation (Windows)
+## 🌟 Why Flynax?
 
-Install Flynax in seconds with our professional cloud installer:
+In a world where you often have to choose between speed (C++) and developer happiness (Python), Flynax says: **"Why not both?"**
 
-```powershell
-powershell -Command "iwr -useb https://raw.githubusercontent.com/flynax-lang/flynex/main/setup.ps1 | iex"
-```
-
-*For manual installation or other platforms, see [INSTALLATION.md](./INSTALLATION.md).*
+- **🚀 Native Performance**: No Virtual Machine. No Interpreter bloat. Compiles to optimized x64 and WASM binaries.
+- **🐍 Clean Syntax**: Uses indentation for blocks. No curly brace fatigue. No semi-colons required.
+- **🏗️ OOP from the Ground Up**: Classes with auto-constructors, methods, and `this` pointer support.
+- **🔋 Full-Stack Power**:
+  - **Game Engine**: Integrated SDL2 for graphics and animations.
+  - **Database**: Native SQLite engine for fast, local storage.
+  - **Web**: Built-in HTTP server, JSON parser, and WebAssembly target for browsers.
+- **🛠️ Professional Toolchain**: Integrated package manager (`flpm`) and cloud registry.
 
 ---
 
-## 📝 Syntax at a Glance
+## 💻 Ultra-Detailed Installation
+
+We’ve made Flynax installation as smooth as possible. Follow the guide below based on your preference.
+
+### 🌐 Method A: The Cloud One-Liner (Recommended)
+This is the fastest way to get Flynax running on Windows. It downloads the compiler, sets up your environment, and configures your PATH automatically.
+
+1.  Open **PowerShell** (as Administrator for best results).
+2.  Run the following command:
+    ```powershell
+    powershell -Command "iwr -useb https://raw.githubusercontent.com/flynax-lang/flynex/main/setup.ps1 | iex"
+    ```
+3.  **Restart your terminal** and type `flynax --version`.
+
+---
+
+### 📦 Method B: Manual Setup (Full Control)
+If you prefer to manage your own directories, follow these steps:
+
+1.  **Download Binary**: Go to the [Releases](https://github.com/flynax-lang/flynex/releases) page and download `flynax-v0.1.0-win64.zip`.
+2.  **Extract**: Extract the Zip to a permanent location, e.g., `C:\flynax`.
+3.  **Configure Environment**:
+    - Open the Start Menu, search for **"Edit the system environment variables"**.
+    - Click **Environment Variables**.
+    - Under **System variables**, find `Path`, select it, and click **Edit**.
+    - Click **New** and add: `C:\flynax\bin`
+    - Click OK on all windows.
+4.  **Install LLVM (Backend)**: Flynax uses LLVM/Clang to link your code. Run:
+    ```powershell
+    winget install -e --id LLVM.LLVM
+    ```
+
+---
+
+## 📝 Learning Flynax in 60 Seconds
+
+### Classes & Objects
+Flynax handles standard boilerplate for you. Notice how properties are declared right in the class signature!
 
 ```fx
-# A simple interactive sum program
+class Player(string name, int health):
+    
+    heal(int amount):
+        health += amount
+        print(name + " now has " + health + " HP")
+
 main():
-    print("Welcome to Flynax!")
-    string name = input("Enter your name: ")
-    print("Hello, " + name)
+    p = Player("Knight", 100)
+    p.heal(20)
+```
+
+### Interactive I/O
+Build interactive console apps with ease:
+
+```fx
+main():
+    string input_val = input("Enter current power level: ")
+    int power = string_to_int(input_val)
     
-    int a = 176
-    string bs = input("Enter a number to add to 176: ")
-    int b = string_to_int(bs)
-    
-    int result = a + b
-    print("Beast Result: " + result)
+    if power > 9000:
+        print("It's over 9000!!!")
+    else:
+        print("Keep training, beast.")
 ```
 
 ---
 
-## 🗺️ Roadmap
+## 🛠️ Troubleshooting
 
-- [x] LLVM Native Code Generation
-- [x] WebAssembly Target Support
-- [x] Standard Library (Math, String, I/O)
-- [x] Package Manager (`flpm`)
-- [ ] Garbage Collection (In Progress)
-- [ ] Standard Library "Magic" Imports
+- **"flynax is not recognized"**: Ensure you restarted your terminal after installation. Check your PATH variables.
+- **"clang not found"**: Ensure you installed LLVM. Run `clang --version` to verify.
+- **Linker Errors**: If you encounter `LNK` errors, ensure you have the Visual Studio C++ Build Tools installed.
+
+For a full deep-dive into setup and common issues, see [INSTALLATION.md](./INSTALLATION.md).
 
 ---
 
-## 🤝 Contributing
+## 🤝 Community & Support
 
-Flynax is an open-source project. We welcome contributions to the compiler, standard library, and documentation! See [CONTRIBUTING.md](./CONTRIBUTING.md) for details.
+- **Discord**: [Join the Flynax Beast Community](https://discord.gg/flynax) (Coming Soon)
+- **Twitter**: [@FlynaxLang](https://twitter.com/flynaxlang)
+- **Issues**: Found a bug? Open an issue on GitHub!
 
-## 📄 License
+---
 
-Flynax is released under the **MIT License**.
+## 📜 License
+Flynax is proudly Open Source under the **MIT License**.
+
+Built with 🔥 by the Flynax Team.
